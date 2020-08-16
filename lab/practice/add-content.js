@@ -1,7 +1,6 @@
 var today = new Date();
 var hourNow = today.getHours();
 var greeting;
-var backgroundColor = prompt("What color do you want the background to be?")
 
 if (hourNow > 18) {
     greeting = 'Good evening!';
@@ -15,3 +14,12 @@ if (hourNow > 18) {
 
 var el = document.getElementById('message');
 el.textContent = greeting;
+
+alert("For the king in the North!!!!") 
+var enter = confirm("Press okay to proceed.")
+// if (enter == true ) {
+//     enter;
+// } else {
+//     close window
+// }
+console.log("Enter value", enter)
