@@ -22,4 +22,10 @@ var enter = confirm("Press okay to proceed.")
 // } else {
 //     close window
 // }
-console.log("Enter value", enter)
+// console.log("Enter value", enter)
+
+var userinput = prompt("Type a color")
+
+var backgroundColor = document.getElementById('background');
+backgroundColor.textContent = "body {background: " + userinput + "}"
+
