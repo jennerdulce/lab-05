@@ -24,7 +24,7 @@ var enter = confirm("Press okay to proceed.")
 // }
 // console.log("Enter value", enter)
 
-var userinput = prompt("Type a color")
+var userinput = prompt("Type a color to change the color of the background")
 
 var backgroundColor = document.getElementById('background');
 backgroundColor.textContent = "body {background: " + userinput + "}"
