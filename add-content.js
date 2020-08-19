@@ -18,7 +18,6 @@ function greetingMessage() {
     el.textContent = greeting;
 }
 
-
 function changeBackground() {
     var userinput = prompt("Type a color to change the color of the background")
 
@@ -26,16 +25,56 @@ function changeBackground() {
     backgroundColor.textContent = "body {background: " + userinput + "}"
 }
 
+function nameMessage() {
+    var name = prompt('What is your name?');
+    var elName = document.getElementById('person');
+    elName.textContent = 'Hello ' + name;
+}
+
+
+function getPreference() {
+    var response = prompt('Would you like an Apple or a Cookie?');
+    var item;
+    
+    while(response != 'cookie' && response != 'apple') {
+        response = prompt('Choose Apple or Cookie');
+    }
+
+    if(response == 'apple') {
+        item = ' <img width="80px" height="80px" src="apple.jpeg" />';
+    } else if (response == 'cookie') {
+        item = ' <img width="80px" height="80px" src="cookie.png" />';
+    }
+
+    return item;
+    
+}   
+
+function getFood() {
+    var counting = prompt('How many would you like?');
+    while(isNaN(counting) || counting ==='') {
+        var counting = prompt('Please type a number for how many  you would like.');
+    }
+    return counting;
+}
+
+function loopingFood(x, food) {
+    var msg = '';
+    for(i = 0; i < x; i++) {
+        document.write(food);
+    }
+}
+
+function displayFood() {
+    var preference = getPreference()
+    var numOfFood = getFood();
+    loopingFood(numOfFood, preference);
+}
+
+
 
 greetingMessage();
 changeBackground();
-alert("For the king in the North!!!!") ;
-
-
-// var enter = confirm("Press okay to proceed.")
-// if (enter == true ) {
-//     enter;
-// } else {
-//     close window
-// }
-// console.log("Enter value", enter)
+nameMessage(); 
+displayFood();
+// // alert("For the king in the North!!!!") ;
